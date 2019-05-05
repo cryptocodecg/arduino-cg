@@ -18,10 +18,11 @@ NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // NewPing setup of pins and
 
 
 void setup() {
-/* Set the baud rate for the software serial port */
-BluetoothSerial.begin(9600); // Initialise BlueTooth
-delay(1000);
-BluetoothSerial.print("Starting ...");
+  /* Set the baud rate for the software serial port */
+  Serial.begin(9600);
+  BluetoothSerial.begin(9600); // Initialise BlueTooth
+  delay(1000);
+  BluetoothSerial.print("Starting ...");
 }
 
 void loop() {
@@ -31,7 +32,7 @@ void loop() {
   Serial.print(uS); 
   Serial.println("cm");
 
-  BluetoothSerial.print("Distance: ");
-  BluetoothSerial.print(uS);
+//  BluetoothSerial.print("Distance: ");
+//  BluetoothSerial.print(uS);
  // BluetoothSerial.print("\n");
 }
